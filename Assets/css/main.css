@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    gap: 30%;
+    padding: 21.84px;
+    margin: 0 165px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.menu{
+    display: flex;
+    gap: 60px;
+}
+.headerRight{
+    display: flex;
+    gap:24px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
