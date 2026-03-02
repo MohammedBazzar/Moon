@@ -1,96 +1,119 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
     box-sizing: border-box;
 }
+.container{
+    width: 80%;
+    margin: 0px auto;
 
-.nav{
+}
+.nav .row{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 21.84px;
-    margin: 0 165px;
 }
-.burger img{
+.burger{
     width: 40px;
     display:none;
 }
-.cart img{
-        width: 40px;
-        display:none;
-}
+
 .logo{
     display: flex;
     align-items: center;
     gap: 9px;
 }
-
-.menu{
+.nav{
+    padding: 20px 0px;
+}
+.menu ul{
     display: flex;
     gap: 60px;
 }
-.headerRight{
+.headerRight ul{
     display: flex;
     gap:24px;
-}
-
-ul{
-    list-style: none;
 }
 
 a{
     color: black;
     text-decoration: none;
 }
-@media screen and (min-width:320px) and (max-width:1050px){
-.burger img {
-    display: flex;
-}
-.cart img{
-        display: flex;
-}
-.nav{
-    justify-content: space-between;
-}
-.menu {
-    display: none;
-}
-.headerRight{
-    display: none;
-}
 
-}
-.Contaner{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 21.84px;
-    gap: 30px;
-    margin: 80px 165px;
-    text-align: center;
-}
+
 .card{
 width: calc( (100% - 90px ) / 4);
+}
+.cards .row{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+gap: 30px;
 }
 .card img{
 width: 100%;
 }
 
 .card h2{
-    margin: 24px;
+    margin: 16px;
+    text-align: center;
 }
 
-@media screen and (min-width:320px) and (max-width:1050px){
-.Contaner {
-flex-direction: column;
-align-items: center;
+@media screen and (min-width:0px) and (max-width:600px){
+    .card{
+width: 100%;
+}
+
+
+.cards .row{
+    flex-direction: column;
+}
+    .burger{
+    display: flex;
+    
+}
+.headerRight .Shopping_cart{
+    display: flex;
+}
+.headerRight .hidden{
+    display: none;
+}
+
+
+.menu {
+    display: none;
+}
 .card{
     width: 100%;
 }
 .card h2{
-    font-size: 15px;
+    font-size: 20px;
     margin: 12px;
 }
 
 }
+
+
+@media screen and (min-width:600px) and (max-width:992px){
+    .card{
+width: calc( (100% - 30px ) / 2);
 }
+        .burger{
+    display: flex;
+    
+}
+    .menu {
+    display: none;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
