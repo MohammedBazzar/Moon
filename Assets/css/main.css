@@ -1,119 +1,258 @@
-*{
+html {
+    font-family: inter;
+    --hedding-font: EB Garamond;
+}
+
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     width: 80%;
     margin: 0px auto;
 
 }
-.nav .row{
+
+.nav .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.burger{
+
+.burger {
     width: 40px;
-    display:none;
+    display: none;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 9px;
 }
-.nav{
+
+.nav {
     padding: 20px 0px;
 }
-.menu ul{
+
+.menu ul {
     display: flex;
     gap: 60px;
 }
-.headerRight ul{
+
+.headerRight ul {
     display: flex;
-    gap:24px;
+    gap: 24px;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
 }
 
-
-.card{
-width: calc( (100% - 90px ) / 4);
-}
-.cards .row{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-
-gap: 30px;
-}
-.card img{
-width: 100%;
+.hero {
+    position: relative;
+    background: url("./../images/hero/heroimg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 640px;
+    margin-bottom: 80px;
 }
 
-.card h2{
+.heroBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #826F66;
+    gap: 42px;
+    left: 165px;
+    width: 420px;
+    height: 640px;
+}
+
+.heroBanner p,
+.heroBanner h1 {
+    color: #FFFFFF;
+
+}
+
+.heroBanner h1 {
+    font-size: 36px;
+}
+
+h1,
+h2 {
+    font-family: var(--hedding-font);
+
+}
+
+.heroBanner .content-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heroBanner input {
+    text-align: center;
+    font-size: 14px;
+    width: 220px;
+    height: 40px;
+    padding: 15px 18px;
+}
+
+.card {
+    width: calc((100% - 90px) / 4);
+}
+
+.cards .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
     margin: 16px;
     text-align: center;
 }
 
-@media screen and (min-width:0px) and (max-width:600px){
-    .card{
-width: 100%;
-}
-
-
-.cards .row{
-    flex-direction: column;
-}
-    .burger{
-    display: flex;
-    
-}
-.headerRight .Shopping_cart{
-    display: flex;
-}
-.headerRight .hidden{
-    display: none;
-}
-
-
-.menu {
-    display: none;
-}
-.card{
+.christmasCollection {
+    text-align: center;
     width: 100%;
 }
-.card h2{
-    font-size: 20px;
-    margin: 12px;
+
+.christmasCollection .container {
+    margin: 0 auto;
+    padding: 0;
 }
 
-}
-
-
-@media screen and (min-width:600px) and (max-width:992px){
-    .card{
-width: calc( (100% - 30px ) / 2);
-}
-        .burger{
+.christmasCollection .row {
     display: flex;
-    
+    align-items: stretch;
+    justify-content: center;
+    max-width: 100%;
 }
+
+.christmasCollection .christmasContent {
+    padding: 60px 40px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+}
+
+.christmasCollection .christmasContent h2 {
+    font-size: 28px;
+}
+
+.christmasCollection .christmasContent a {
+    text-decoration: underline;
+}
+
+.christmasCollection .christmasimg {
+    line-height: 0;
+    flex: 1;
+
+}
+
+.christmasCollection .christmasimg img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    .card {
+        width: 100%;
+    }
+
+
+    .cards .row {
+        flex-direction: column;
+    }
+
+    .burger {
+        display: flex;
+
+    }
+
+    .headerRight .Shopping_cart {
+        display: flex;
+    }
+
+    .headerRight .hidden {
+        display: none;
+    }
+
+
     .menu {
-    display: none;
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        margin: 12px;
+    }
+
 }
+
+
+@media screen and (min-width:600px) and (max-width:992px) {
+    .card {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .burger {
+        display: flex;
+
+    }
+
+    .menu {
+        display: none;
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .hero {
+        width: 100%;
+        background-position: center;
+        margin-bottom: 430px;
+    }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+    .heroBanner {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 400px;
+    }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+
+}
+@media screen and (max-width:992px){
+
+        .christmasCollection .row {
+        flex-direction: column;
+    }
+}
